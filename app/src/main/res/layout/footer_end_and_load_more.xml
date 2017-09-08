@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?><!--加载更多和全部加载完毕布局-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground">
+        <!--全部加载-->
+        <TextView
+            android:id="@+id/footer_end_and_load_more_end"
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/base_size2"
+            android:gravity="center"
+            android:text="已全部加载"
+            android:textColor="@color/text_content_title"
+            android:textSize="@dimen/text_size_caption"
+            android:visibility="gone" />
+        <!--加载更多-->
+        <LinearLayout
+            android:id="@+id/footer_end_and_load_more_load"
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/base_size2"
+                android:text="正在加载更多..."
+                android:textColor="@color/text_content_title"
+                android:textSize="@dimen/text_size_caption" />
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/ad_item_view_image"
+        android:layout_width="match_parent"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"/>
+</merge>

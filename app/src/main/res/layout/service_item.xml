@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/base_size2" />
+
+    <LinearLayout
+        android:id="@+id/service_holder"
+        style="@style/ItemWhiteStyle">
+
+        <TextView
+            style="@style/ItemTitleStyle"
+            android:text="服务项目"
+            android:textColor="@color/text_content_secondary" />
+
+        <TextView
+            android:id="@+id/service_name"
+            style="@style/ItemAddContentStyle"
+            android:hint="选择服务项目" />
+
+        <ImageView
+            android:id="@+id/service_arrow"
+            style="@style/ItemArrowStyle" />
+    </LinearLayout>
+
+    <include layout="@layout/divider_horizontal" />
+
+    <LinearLayout
+        android:id="@+id/staff_holder"
+        style="@style/ItemWhiteStyle">
+
+        <TextView
+            style="@style/ItemTitleStyle"
+            android:text="服务人员"
+            android:textColor="@color/text_content_secondary" />
+
+        <TextView
+            android:id="@+id/staff_name"
+            style="@style/ItemAddContentStyle"
+            android:hint="选择服务人员" />
+
+        <ImageView
+            android:id="@+id/staff_arrow"
+            style="@style/ItemArrowStyle" />
+    </LinearLayout>
+</merge>

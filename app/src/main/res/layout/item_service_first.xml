@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/title"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/button_size_normal"
+    android:background="@drawable/click_white"
+    android:gravity="center|center_horizontal"
+    android:singleLine="true"
+    android:textColor="@color/service_first"
+    android:textSize="@dimen/text_size_subhead"
+    tools:text="发路上看到减肥的时空裂缝六角恐龙" />

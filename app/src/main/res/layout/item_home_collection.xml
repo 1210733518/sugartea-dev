@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/home_collection"
+    android:background="@color/text_white"
+    android:orientation="vertical">
+
+    <com.dianjiake.android.view.widget.RecommendView
+        android:id="@+id/recommend_views"
+        android:layout_width="match_parent"
+        android:layout_height="168dp"
+        android:layout_marginTop="@dimen/base_size4"></com.dianjiake.android.view.widget.RecommendView>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/background"></FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_card"
+        app:layout_constraintDimensionRatio="2.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <FrameLayout
+            android:id="@+id/gradient_bg"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/item_coupon_bg_purple"
+            app:layout_constraintDimensionRatio="5"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <FrameLayout
+            android:id="@+id/wave_bg"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_wave"
+            app:layout_constraintBottom_toBottomOf="@+id/gradient_bg"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/logo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="@dimen/base_margin"
+            app:layout_constraintBottom_toTopOf="@+id/wave_bg"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:placeholderImage="@color/divider"
+            app:placeholderImageScaleType="centerCrop"
+            app:roundAsCircle="true" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/corner_tip"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:actualImageScaleType="centerCrop"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:roundBottomLeft="false"
+            app:roundBottomRight="false"
+            app:roundTopLeft="false"
+            app:roundTopRight="true"
+            app:roundedCornerRadius="@dimen/base_size1" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/base_margin"
+            android:singleLine="true"
+            android:textColor="@color/text_white"
+            android:textSize="25dp"
+            app:layout_constraintBottom_toTopOf="@+id/wave_bg"
+            app:layout_constraintLeft_toRightOf="@+id/logo"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="发生的佛挡杀佛 SD而温柔" />
+
+        <TextView
+            android:id="@+id/rule"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/base_margin"
+            android:layout_marginRight="@dimen/base_margin"
+            android:singleLine="true"
+            android:textColor="@color/text_content_secondary"
+            android:textSize="@dimen/text_size_body"
+            app:layout_constraintBottom_toTopOf="@+id/time"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/get"
+            app:layout_constraintTop_toBottomOf="@+id/wave_bg"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:layout_goneMarginRight="@dimen/base_margin"
+            tools:text="使用规则:发生了开的房间啊电流声考几分多久啊刷卡机发v 那下次 v 祝你们， " />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/base_margin"
+            android:layout_marginRight="@dimen/base_margin"
+            android:layout_marginTop="@dimen/base_size2"
+            android:singleLine="true"
+            android:textColor="@color/text_content_secondary"
+            android:textSize="@dimen/text_size_body"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/get"
+            app:layout_constraintTop_toBottomOf="@+id/rule"
+            tools:text="使用期限：女毛主席，VC，中南传媒，女哦额日哦温泉日" />
+
+        <Button
+            android:id="@+id/get"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/base_margin"
+            android:background="@drawable/circle_main"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:paddingBottom="@dimen/base_size1"
+            android:paddingLeft="@dimen/base_size2"
+            android:paddingRight="@dimen/base_size2"
+            android:paddingTop="@dimen/base_size1"
+            android:text="领取"
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/text_size_body"
+            app:layout_constraintBottom_toBottomOf="@+id/time"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

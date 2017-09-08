@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?><!--加载失败重新加载-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/base_size8"
+    android:paddingTop="@dimen/base_size8">
+
+    <ImageView
+        android:layout_width="@dimen/base_loading_view_size"
+        android:layout_height="@dimen/base_loading_view_size"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/img_loading" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/base_size2"
+        android:gravity="center"
+        android:text="世界上最远的距离就是没有网络"
+        android:textColor="@color/text_content_hint" />
+
+    <!--重新加载按钮-->
+    <Button
+        android:id="@+id/base_loading_layout_button_reload"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/button_size_mini"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/base_size2"
+        android:background="@drawable/button_main"
+        android:text="重新加载"
+        android:textColor="@color/text_white"
+        android:textSize="@dimen/text_size_body" />
+</LinearLayout>

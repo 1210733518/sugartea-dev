@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/text_white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/base_margin"
+        android:paddingRight="@dimen/base_margin">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="附近店铺"
+            android:textColor="@color/text_content_title"
+            android:textSize="@dimen/text_size_subhead" />
+
+
+        <RadioGroup
+            android:id="@+id/filter_group"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/base_margin"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/filter_base"
+                style="@style/HomeFilterRadioStyle"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="综合排序" />
+
+            <RadioButton
+                android:id="@+id/filter_score"
+                style="@style/HomeFilterRadioStyle"
+                android:layout_weight="1"
+                android:text="评分最高" />
+
+            <RadioButton
+                android:id="@+id/filter_distance"
+                style="@style/HomeFilterRadioStyle"
+                android:layout_weight="1"
+                android:text="距离最近" />
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_size"
+        android:layout_gravity="bottom"
+        android:src="@color/divider" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_size"
+        android:layout_gravity="top"
+        android:src="@color/divider" />
+</merge>

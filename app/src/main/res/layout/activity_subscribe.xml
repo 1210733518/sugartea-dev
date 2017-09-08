@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_main" />
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/other_service_holder"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:animateLayoutChanges="true"
+                android:layout_height="wrap_content"></LinearLayout>
+            <LinearLayout
+                android:id="@+id/add_service"
+                style="@style/ItemWhiteStyle"
+                android:layout_marginTop="@dimen/base_size2"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="@dimen/base_size4"
+                    android:layout_height="@dimen/base_size4"
+                    android:src="@drawable/ic_service_add" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/base_size2"
+                    android:text="继续添加服务"
+                    android:textColor="@color/text_content_secondary"
+                    android:textSize="@dimen/text_size_subhead" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/time_holder"
+                style="@style/ItemWhiteStyle"
+                android:layout_marginTop="@dimen/base_size2">
+
+                <TextView
+                    style="@style/ItemTitleStyle"
+                    android:text="服务时间" />
+
+                <TextView
+                    android:id="@+id/time_name"
+                    style="@style/ItemAddContentStyle"
+                    android:gravity="left"
+                    android:hint="请选择预约时间" />
+
+                <ImageView style="@style/ItemArrowStyle" />
+            </LinearLayout>
+
+            <include layout="@layout/divider_horizontal" />
+
+            <LinearLayout
+                android:id="@+id/phone_holder"
+                style="@style/ItemWhiteStyle">
+
+                <TextView
+                    style="@style/ItemTitleStyle"
+                    android:text="联系电话" />
+
+                <EditText
+                    android:id="@+id/phone"
+                    android:inputType="numberSigned"
+                    style="@style/ItemAddContentStyle"
+
+                    android:background="@null"
+                    android:gravity="left"
+                    android:hint="请输入手机号" />
+
+            </LinearLayout>
+
+            <include layout="@layout/divider_horizontal" />
+
+            <LinearLayout
+                android:id="@+id/name_holder"
+                style="@style/ItemWhiteStyle">
+
+                <TextView
+                    style="@style/ItemTitleStyle"
+                    android:text="联系人    " />
+
+                <EditText
+                    android:id="@+id/name"
+                    style="@style/ItemAddContentStyle"
+                    android:background="@null"
+                    android:gravity="left"
+                    android:hint="请输入姓名" />
+
+                <RadioGroup
+                    android:id="@+id/subscribe_gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/subscribe_male"
+                        style="@style/SubscribeRadioStyle"
+                        android:button="@drawable/radio_subscribe_male"
+                        android:checked="true"
+                        android:text="先生" />
+
+                    <RadioButton
+                        android:id="@+id/subscribe_female"
+                        style="@style/SubscribeRadioStyle"
+                        android:layout_marginLeft="@dimen/base_size4"
+                        android:button="@drawable/radio_subscribe_female"
+                        android:text="女士" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/come_holder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <include layout="@layout/divider_horizontal" />
+
+                <LinearLayout
+                    android:id="@+id/location_holder"
+                    style="@style/ItemWhiteStyle">
+
+                    <TextView
+                        style="@style/ItemTitleStyle"
+                        android:text="服务地址" />
+
+                    <TextView
+                        android:id="@+id/locaion_name"
+                        style="@style/ItemAddContentStyle"
+                        android:gravity="left"
+                        android:hint="请选择住址" />
+
+                    <ImageView style="@style/ItemArrowStyle" />
+                </LinearLayout>
+
+                <include layout="@layout/divider_horizontal" />
+
+                <LinearLayout
+                    android:id="@+id/address_holder"
+                    style="@style/ItemWhiteStyle">
+
+                    <TextView
+                        style="@style/ItemTitleStyle"
+                        android:text="服务地址"
+                        android:visibility="invisible" />
+
+                    <EditText
+                        android:id="@+id/address"
+                        style="@style/ItemAddContentStyle"
+                        android:layout_marginRight="@dimen/base_margin"
+                        android:background="@null"
+                        android:gravity="left"
+                        android:hint="具体楼号，门牌号" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_size_normal"
+        android:background="@drawable/click_main"
+        android:text="立即预约"
+        android:textColor="@color/text_white"
+        android:textSize="@dimen/text_size_subhead" />
+</LinearLayout>

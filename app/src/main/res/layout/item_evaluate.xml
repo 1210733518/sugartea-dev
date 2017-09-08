@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/text_white"
+        android:paddingBottom="@dimen/base_margin"
+        android:paddingLeft="@dimen/base_size4"
+        android:paddingRight="@dimen/base_size4"
+        android:paddingTop="@dimen/base_size3">
+
+        <RelativeLayout
+            android:id="@+id/evaluate_service_holder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/evaluate_logo"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/evaluate_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/base_size3"
+                android:layout_marginTop="@dimen/base_size1"
+                android:layout_toRightOf="@id/evaluate_logo"
+                android:singleLine="true"
+                android:textColor="@color/text_content_title"
+                android:textSize="@dimen/text_size_subhead"
+                tools:text="美甲" />
+
+            <TextView
+                android:id="@+id/evaluate_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/evaluate_logo"
+                android:layout_marginLeft="@dimen/base_size3"
+                android:layout_toRightOf="@id/evaluate_logo"
+                android:gravity="bottom"
+                android:paddingBottom="@dimen/base_size1"
+                android:singleLine="true"
+                android:textColor="@color/main"
+                tools:text="asdfksajf" />
+
+            <TextView
+                android:id="@+id/evaluate_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/evaluate_price"
+                android:layout_marginLeft="2dp"
+                android:layout_toRightOf="@id/evaluate_price"
+                android:gravity="bottom"
+                android:paddingBottom="@dimen/base_size3"
+                android:singleLine="true"
+                android:textColor="@color/text_content_text"
+                android:textSize="@dimen/text_size_caption"
+                android:visibility="gone"
+                tools:text="asdfksajf" />
+
+            <TextView
+                android:id="@+id/evaluate_old"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/evaluate_price"
+                android:layout_marginLeft="@dimen/base_size1"
+                android:layout_toRightOf="@id/evaluate_unit"
+                android:gravity="bottom"
+                android:paddingBottom="@dimen/base_size3"
+                android:singleLine="true"
+                android:textColor="@color/text_content_secondary"
+                android:textSize="@dimen/text_size_caption"
+                android:visibility="gone"
+                tools:text="asdfksajf" />
+        </RelativeLayout>
+
+        <com.dianjiake.android.view.widget.RatingBar
+            android:id="@+id/evaluate_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/evaluate_service_holder"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/base_size7"
+            app:clickable="true"
+            app:starEmpty="@drawable/ic_star_negative"
+            app:starFill="@drawable/ic_star_positive"
+            app:starHalf="@drawable/ic_star_positive"
+            app:starImageHeight="@dimen/base_size8"
+            app:starImagePadding="@dimen/base_size1"
+            app:starImageSize="@dimen/base_size8"
+            app:starImageWidth="@dimen/base_size8"
+            app:totalStar="5" />
+
+        <TextView
+            android:id="@+id/evaluate_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/evaluate_rating"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/base_size5"
+            android:text="为本次服务打个分吧！"
+            android:textColor="@color/text_content_text"
+            android:textSize="@dimen/text_size_body" />
+
+        <EditText
+            android:id="@+id/evaluate_input"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@id/evaluate_desc"
+            android:layout_marginTop="@dimen/base_size8"
+            android:background="@drawable/evaluate_input_bg"
+            android:gravity="start"
+            android:hint="你的评价对其他会员是很重要的参考~"
+            android:lineSpacingExtra="@dimen/base_size1"
+            android:paddingBottom="@dimen/base_size6"
+            android:paddingLeft="@dimen/base_size3"
+            android:paddingRight="@dimen/base_size3"
+            android:paddingTop="@dimen/base_size3"
+            android:textColor="@color/text_content_title"
+            android:textColorHint="@color/text_content_hint"
+            android:textSize="@dimen/text_size_subhead" />
+
+        <TextView
+            android:id="@+id/evaluate_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/evaluate_input"
+            android:layout_alignRight="@id/evaluate_input"
+            android:paddingBottom="@dimen/base_size2"
+            android:paddingRight="@dimen/base_size2"
+            android:text="10/23"
+            android:textColor="@color/text_content_hint"
+            android:textSize="@dimen/text_size_caption" />
+
+
+    </RelativeLayout>
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/base_size2" />
+</LinearLayout>

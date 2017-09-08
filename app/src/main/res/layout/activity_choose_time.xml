@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_main" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/text_white">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_size"
+            android:layout_gravity="bottom"
+            android:background="@color/divider" />
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/choose_time_tab"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_size"
+            android:elevation="1dp"
+            app:tabIndicatorColor="@color/main"
+            app:tabSelectedTextColor="@color/main"
+            app:tabTextColor="@color/text_toolbar_text" />
+
+
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:id="@+id/choose_time_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/choose_time_button"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_size_normal"
+        android:background="@drawable/click_main"
+        android:text="确定选择"
+        android:textColor="@color/text_white"
+        android:textSize="@dimen/text_size_subhead" />
+
+</LinearLayout>

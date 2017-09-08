@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    android:orientation="vertical">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/shop_logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:placeholderImage="@color/divider"
+        app:viewAspectRatio="1.5" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/shop_info_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/text_white"
+        android:paddingBottom="@dimen/base_margin">
+
+        <TextView
+            android:id="@+id/shop_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/base_margin"
+            android:layout_marginTop="@dimen/base_margin"
+            android:textColor="@color/text_content_title"
+            android:textSize="@dimen/text_size_subhead"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/star"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="asdfsadfsdfsf" />
+
+        <com.dianjiake.android.view.widget.StarView
+            android:id="@+id/star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/base_margin"
+            app:layout_constraintBottom_toBottomOf="@+id/shop_name"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <TextView
+            android:id="@+id/shop_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/base_margin"
+            android:layout_marginTop="@dimen/base_size6"
+            android:textColor="@color/text_content_title"
+            android:textSize="@dimen/text_size_body"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/shop_call"
+            app:layout_constraintTop_toBottomOf="@+id/shop_name"
+            tools:text="19:00" />
+
+        <TextView
+            android:id="@+id/shop_location"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/base_margin"
+            android:layout_marginTop="@dimen/base_margin"
+            android:textColor="@color/text_content_title"
+            android:textSize="@dimen/text_size_body"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintLeft_toLeftOf="@+id/shop_time"
+            app:layout_constraintRight_toLeftOf="@+id/shop_call"
+            app:layout_constraintTop_toBottomOf="@+id/shop_time"
+            tools:text="asfasdfsdafdffsdkljkfklajdfsdfsdfjkf" />
+
+        <FrameLayout
+            android:id="@+id/shop_call"
+            android:layout_width="0dp"
+
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/base_margin"
+            app:layout_constraintBottom_toBottomOf="@+id/shop_location"
+            app:layout_constraintLeft_toLeftOf="@+id/star"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/shop_time">
+
+            <ImageView
+                android:layout_width="@dimen/base_size4"
+                android:layout_height="@dimen/base_size4"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_phone" />
+        </FrameLayout>
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.dianjiake.android.view.coupon.GetCouponView
+            android:id="@+id/get_coupon"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="2.5"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+</LinearLayout>

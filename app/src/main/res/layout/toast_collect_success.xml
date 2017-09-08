@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/text"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/toast_collect_bg"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/base_margin"
+    android:paddingLeft="@dimen/base_size6"
+    android:paddingRight="@dimen/base_size6"
+    android:paddingTop="@dimen/base_margin"
+    android:text="收藏成功"
+    android:textColor="@color/text_white"
+    android:textSize="@dimen/text_size_subhead">
+
+</TextView>

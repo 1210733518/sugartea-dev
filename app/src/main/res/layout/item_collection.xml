@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/holder"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/click_white"
+    android:orientation="vertical">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="@dimen/base_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0"
+        app:placeholderImage="@color/divider"
+        app:roundBottomLeft="true"
+        app:roundBottomRight="true"
+        app:roundTopLeft="true"
+        app:roundTopRight="true"
+        app:roundedCornerRadius="@dimen/base_size1" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/base_margin"
+        android:singleLine="true"
+        android:textColor="@color/text_content_title"
+        android:textSize="@dimen/text_size_title"
+        app:layout_constraintLeft_toRightOf="@+id/logo"
+        app:layout_constraintRight_toLeftOf="@+id/distance"
+        app:layout_constraintTop_toTopOf="@+id/logo"
+        tools:text="康乐新fsdfsdfdsfsdfdsfdsfsdfs村" />
+
+    <TextView
+        android:id="@+id/distance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/base_margin"
+        android:layout_marginRight="@dimen/base_margin"
+        android:singleLine="true"
+        android:textColor="@color/text_content_secondary"
+        android:textSize="@dimen/text_size_caption"
+        app:layout_constraintBaseline_toBaselineOf="@+id/name"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:text="康乐新村" />
+
+    <TextView
+        android:id="@+id/desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/base_margin"
+        android:ellipsize="end"
+        android:gravity="top|left"
+        android:maxLines="2"
+        android:textColor="@color/text_content_secondary"
+        android:textSize="@dimen/text_size_subhead"
+        app:layout_constraintBottom_toTopOf="@+id/star"
+        app:layout_constraintLeft_toLeftOf="@+id/name"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        tools:text="康乐新fsdfsdfdsfsdfdsfddfs村" />
+
+
+    <com.dianjiake.android.view.widget.StarView
+        android:id="@+id/star"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/base_margin"
+        app:layout_constraintBottom_toBottomOf="@+id/logo"
+        app:layout_constraintLeft_toRightOf="@+id/logo" />
+
+    <ImageView
+        style="@style/DividerHorizontalStyle"
+        android:layout_width="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+</android.support.constraint.ConstraintLayout>

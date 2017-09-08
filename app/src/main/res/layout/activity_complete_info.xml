@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_main" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                style="@style/MeItemHolderStyle"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/base_size2"
+                android:paddingTop="@dimen/base_size2">
+
+                <TextView
+                    style="@style/TextMeItemStyle"
+                    android:layout_marginLeft="0dp"
+                    android:text="头像" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/complete_info_avatar"
+                    android:layout_width="62dp"
+                    android:layout_height="62dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/base_size2"
+                    app:placeholderImage="@drawable/ic_defaul_avatar"
+                    app:roundAsCircle="true" />
+
+                <ImageView
+                    style="@style/MeItemIconStyle"
+                    android:src="@drawable/ic_right_arrow" />
+            </LinearLayout>
+
+            <ImageView style="@style/DividerHorizontalStyle" />
+
+            <LinearLayout
+                android:id="@+id/name_holder"
+                style="@style/MeItemHolderStyle">
+
+                <TextView
+                    style="@style/TextMeItemStyle"
+                    android:layout_marginLeft="0dp"
+                    android:text="昵称" />
+
+                <TextView
+                    android:id="@+id/complete_info_nickname"
+                    style="@style/TextMeItemHintStyle"
+                    android:background="@null"
+                    android:gravity="right"
+                    android:hint="请输入您的昵称"
+                    android:singleLine="true"
+                    android:textColorHint="@color/text_content_hint"
+                    android:textCursorDrawable="@null" />
+
+                <ImageView
+                    style="@style/MeItemIconStyle"
+                    android:src="@drawable/ic_right_arrow" />
+            </LinearLayout>
+
+
+            <ImageView style="@style/DividerHorizontalStyle" />
+
+            <LinearLayout
+                android:id="@+id/complete_info_gender"
+                style="@style/MeItemHolderStyle">
+
+                <TextView
+                    style="@style/TextMeItemStyle"
+                    android:layout_marginLeft="0dp"
+                    android:text="性别" />
+
+                <TextView
+                    android:id="@+id/complete_info_gender_text"
+                    style="@style/TextMeItemHintStyle"
+                    android:text="男" />
+
+                <ImageView
+                    style="@style/MeItemIconStyle"
+                    android:src="@drawable/ic_right_arrow" />
+            </LinearLayout>
+
+            <ImageView style="@style/DividerHorizontalStyle" />
+
+            <LinearLayout
+                android:id="@+id/complete_info_age"
+                style="@style/MeItemHolderStyle">
+
+                <TextView
+                    style="@style/TextMeItemStyle"
+                    android:layout_marginLeft="0dp"
+                    android:text="年龄" />
+
+                <TextView
+                    android:id="@+id/complete_info_age_text"
+                    style="@style/TextMeItemHintStyle" />
+
+                <ImageView
+                    style="@style/MeItemIconStyle"
+                    android:src="@drawable/ic_right_arrow" />
+            </LinearLayout>
+
+            <ImageView style="@style/DividerHorizontalStyle" />
+
+            <LinearLayout
+                android:id="@+id/complete_info_occupation"
+                style="@style/MeItemHolderStyle">
+
+                <TextView
+                    style="@style/TextMeItemStyle"
+                    android:layout_marginLeft="0dp"
+                    android:text="职业" />
+
+                <TextView
+                    android:id="@+id/complete_info_occupation_text"
+                    style="@style/TextMeItemHintStyle"
+                    android:text="" />
+
+                <ImageView
+                    style="@style/MeItemIconStyle"
+                    android:src="@drawable/ic_right_arrow" />
+            </LinearLayout>
+
+            <ImageView style="@style/DividerHorizontalStyle" />
+
+            <LinearLayout
+                android:id="@+id/complete_info_microdistrict"
+                style="@style/MeItemHolderStyle">
+
+                <TextView
+                    style="@style/TextMeItemStyle"
+                    android:layout_marginLeft="0dp"
+                    android:text="所在小区" />
+
+                <TextView
+                    android:id="@+id/complete_info_microdistrict_text"
+                    style="@style/TextMeItemHintStyle"
+                    android:text="" />
+
+                <ImageView
+                    style="@style/MeItemIconStyle"
+                    android:src="@drawable/ic_right_arrow" />
+            </LinearLayout>
+
+            <ImageView style="@style/DividerHorizontalStyle" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <Button
+        android:id="@+id/complete_info_commit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_size_normal"
+        android:background="@drawable/click_main"
+        android:text="提交资料"
+        android:textColor="@color/text_white" />
+</LinearLayout>

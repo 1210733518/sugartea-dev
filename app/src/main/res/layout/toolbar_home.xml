@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/toolbar_holder"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/text_white"
+    android:orientation="vertical">
+
+    <com.dianjiake.android.view.widget.ToolbarSpaceView
+        android:id="@+id/toolbar_space"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_size"
+        android:animateLayoutChanges="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/toolbar_location_holder"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="@dimen/base_size3"
+            android:background="@drawable/bg_home_location"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/base_size2"
+            android:paddingRight="@dimen/base_size2">
+
+            <TextView
+                android:id="@+id/toolbar_location_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLength="4"
+                android:singleLine="true"
+                android:text="正在定位f"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/text_size_body" />
+
+            <ImageView
+                android:layout_width="@dimen/base_size3"
+                android:layout_height="@dimen/base_size3"
+                android:layout_marginLeft="@dimen/base_size1"
+                android:src="@drawable/ic_bottom_arrow_white"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/toolbar_search_holder"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="@dimen/base_size3"
+            android:layout_marginRight="@dimen/base_size3"
+            android:layout_weight="1"
+            android:background="@drawable/bg_home_search"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/base_size2"
+            android:paddingRight="@dimen/base_size2">
+
+            <ImageView
+                android:layout_width="@dimen/base_size3"
+                android:layout_height="@dimen/base_size3"
+                android:layout_marginLeft="@dimen/base_size1"
+                android:src="@drawable/ic_toolbar_search_grey" />
+
+            <TextView
+                android:id="@+id/toolbar_search_input"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/base_size2"
+                android:background="@null"
+                android:singleLine="true"
+                android:text="搜索感兴趣的服务和商家"
+                android:textColor="@color/text_content_secondary"
+                android:textColorHint="@color/text_content_hint"
+                android:textSize="@dimen/text_size_body" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/toolbar_msg_holder"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="@dimen/base_margin"
+            android:background="@drawable/bg_home_location"
+            android:clipChildren="false">
+
+            <com.dianjiake.android.view.widget.MsgIconView
+                android:id="@+id/msg_icon"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_msg_white" />
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_main" />
+
+    <LinearLayout
+        android:id="@+id/setting_phone"
+        style="@style/ItemWhiteStyle"
+        android:layout_marginTop="@dimen/base_margin">
+
+
+        <TextView
+            style="@style/MineTitleStyle"
+            android:layout_marginLeft="0dp"
+            android:text="修改手机号" />
+
+        <Space style="@style/ItemSpaceStyle" />
+
+        <TextView
+            android:id="@+id/setting_phone_text"
+            style="@style/MineTextStyle"
+            tools:text="23" />
+
+        <ImageView style="@style/ItemArrowStyle" />
+    </LinearLayout>
+
+    <include layout="@layout/divider_horizontal" />
+
+    <LinearLayout
+        android:id="@+id/setting_call"
+        style="@style/ItemWhiteStyle">
+
+
+        <TextView
+            style="@style/MineTitleStyle"
+            android:layout_marginLeft="0dp"
+            android:text="意见反馈" />
+
+        <Space style="@style/ItemSpaceStyle" />
+
+
+        <ImageView style="@style/ItemArrowStyle" />
+    </LinearLayout>
+
+    <include layout="@layout/divider_horizontal" />
+
+
+    <LinearLayout
+        android:id="@+id/setting_evaluate"
+        style="@style/ItemWhiteStyle">
+
+        <TextView
+            style="@style/MineTitleStyle"
+            android:layout_marginLeft="0dp"
+            android:text="我要评价" />
+
+        <Space style="@style/ItemSpaceStyle" />
+
+
+        <ImageView style="@style/ItemArrowStyle" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/setting_log_out"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_size_normal"
+        android:layout_marginTop="@dimen/base_margin"
+        android:background="@drawable/click_white"
+        android:text="退出"
+        android:textColor="@color/main"
+        android:textSize="@dimen/text_size_subhead" />
+</LinearLayout>

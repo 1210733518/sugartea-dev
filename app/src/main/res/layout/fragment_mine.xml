@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/bg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fitsSystemWindows="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img_mine"
+        app:layout_constraintDimensionRatio="1.87"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/toolbar"
+
+        layout="@layout/toolbar_mine" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/avatar"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="@dimen/base_size8"
+        app:layout_constraintBottom_toTopOf="@+id/name"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar"
+        app:layout_constraintVertical_chainStyle="spread"
+        app:placeholderImage="@drawable/ic_defaul_avatar"
+        app:roundAsCircle="true" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:shadowColor="@color/text_content_secondary"
+        android:shadowDy="1"
+        android:shadowRadius="1"
+        android:textColor="@color/text_white"
+        app:layout_constraintBottom_toBottomOf="@+id/bg"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/avatar"
+        tools:text="fasdfdsfdsfsdkfj" />
+
+    <LinearLayout
+        android:id="@+id/item_holder"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/base_size2"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bg">
+        <!--订单中心-->
+        <LinearLayout
+            android:id="@+id/mine_order"
+            style="@style/ItemWhiteStyle">
+
+            <ImageView
+                style="@style/MineIconStyle"
+                android:src="@drawable/ic_mine_order" />
+
+            <TextView
+                style="@style/MineTitleStyle"
+                android:text="订单中心" />
+
+            <Space style="@style/ItemSpaceStyle" />
+
+            <TextView
+                android:id="@+id/num_mine_order_text"
+                style="@style/MineTextStyle"
+                tools:text="23" />
+
+            <ImageView style="@style/ItemArrowStyle" />
+        </LinearLayout>
+
+        <include layout="@layout/divider_horizontal" />
+
+        <!-- 收藏-->
+        <LinearLayout
+            android:id="@+id/mine_collection"
+            style="@style/ItemWhiteStyle">
+
+            <ImageView
+                style="@style/MineIconStyle"
+                android:src="@drawable/ic_mine_collection" />
+
+            <TextView
+                style="@style/MineTitleStyle"
+                android:text="收藏店铺" />
+
+            <Space style="@style/ItemSpaceStyle" />
+
+            <TextView
+                android:id="@+id/num_mine_collection_text"
+                style="@style/MineTextStyle"
+                tools:text="23" />
+
+            <ImageView style="@style/ItemArrowStyle" />
+        </LinearLayout>
+
+        <include layout="@layout/divider_horizontal" />
+
+        <!-- 优惠券-->
+        <LinearLayout
+            android:id="@+id/mine_cards"
+            style="@style/ItemWhiteStyle">
+
+            <ImageView
+                style="@style/MineIconStyle"
+                android:src="@drawable/ic_mine_coupon" />
+
+            <TextView
+                style="@style/MineTitleStyle"
+                android:text="优惠券" />
+
+            <Space style="@style/ItemSpaceStyle" />
+
+            <TextView
+                android:id="@+id/num_mine_cards_text"
+                style="@style/MineTextStyle"
+                tools:text="23" />
+
+            <ImageView style="@style/ItemArrowStyle" />
+        </LinearLayout>
+
+        <include layout="@layout/divider_horizontal" />
+
+        <!-- 会员卡-->
+        <LinearLayout
+            android:id="@+id/mine_vip"
+
+            style="@style/ItemWhiteStyle">
+
+            <ImageView
+                style="@style/MineIconStyle"
+                android:src="@drawable/ic_mine_vip" />
+
+            <TextView
+                style="@style/MineTitleStyle"
+                android:text="会员卡" />
+
+            <Space style="@style/ItemSpaceStyle" />
+
+            <TextView
+                android:id="@+id/num_mine_vip_text"
+                style="@style/MineTextStyle"
+                tools:text="23" />
+
+            <ImageView style="@style/ItemArrowStyle" />
+        </LinearLayout>
+
+        <include layout="@layout/divider_horizontal" />
+        <!-- 会员卡-->
+        <LinearLayout
+            android:id="@+id/mine_join"
+
+            style="@style/ItemWhiteStyle">
+
+            <ImageView
+                style="@style/MineIconStyle"
+                android:src="@drawable/ic_mine_join" />
+
+            <TextView
+                style="@style/MineTitleStyle"
+                android:text="商家入驻" />
+
+            <Space style="@style/ItemSpaceStyle" />
+
+            <TextView
+                android:id="@+id/num_mine_join_text"
+                style="@style/MineTextStyle"
+                tools:text="23" />
+
+            <ImageView style="@style/ItemArrowStyle" />
+        </LinearLayout>
+        <!-- 会员卡-->
+        <LinearLayout
+            android:id="@+id/mine_call"
+            style="@style/ItemWhiteStyle"
+            android:layout_marginTop="@dimen/base_size2">
+
+            <ImageView
+                style="@style/MineIconStyle"
+                android:src="@drawable/ic_mine_call" />
+
+            <TextView
+                style="@style/MineTitleStyle"
+                android:text="联系客服" />
+
+            <Space style="@style/ItemSpaceStyle" />
+
+            <ImageView style="@style/ItemArrowStyle" />
+        </LinearLayout>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

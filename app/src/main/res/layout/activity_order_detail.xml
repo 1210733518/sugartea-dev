@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_main" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/base_margin">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/text_white"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/base_margin">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/detail_logo"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="@dimen/base_margin"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:placeholderImage="@color/divider"
+                    app:roundAsCircle="true" />
+
+                <TextView
+                    android:id="@+id/detail_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/base_margin"
+                    android:textColor="@color/main"
+                    android:textSize="@dimen/text_size_subhead"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/detail_logo"
+                    tools:text="商家没确认" />
+
+                <TextView
+                    android:id="@+id/detail_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/base_margin"
+                    android:textColor="@color/text_content_secondary"
+                    android:textSize="@dimen/text_size_body"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/detail_status" />
+
+                <Button
+                    android:id="@+id/detail_button1"
+                    style="@style/OrderButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/base_margin"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/detail_button2"
+                    app:layout_constraintTop_toBottomOf="@+id/detail_desc"
+                    app:layout_goneMarginRight="0dp"
+                    tools:text="再来一次" />
+
+                <Button
+                    android:id="@+id/detail_button2"
+                    style="@style/OrderButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="@dimen/base_size4"
+                    android:layout_marginStart="@dimen/base_size4"
+                    app:layout_constraintLeft_toRightOf="@+id/detail_button1"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/detail_button1"
+                    tools:text="再来一次" />
+
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/base_size2"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.dianjiake.android.view.coupon.GetCouponView
+                    android:id="@+id/get_coupon"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="2.5"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/holder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/base_margin"
+                android:layout_marginRight="@dimen/base_margin"
+                android:background="@drawable/bg_card"
+                android:orientation="vertical">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/logo"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="@dimen/base_margin"
+                    android:layout_marginStart="@dimen/base_margin"
+                    android:layout_marginTop="@dimen/base_size2"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:placeholderImage="@color/divider"
+                    app:roundAsCircle="true" />
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/base_size2"
+                    android:layout_marginRight="@dimen/base_size2"
+                    android:layout_marginStart="@dimen/base_size2"
+                    android:singleLine="true"
+                    android:textColor="@color/text_content_title"
+                    android:textSize="@dimen/text_size_subhead"
+                    app:layout_constraintBottom_toBottomOf="@+id/logo"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintLeft_toRightOf="@+id/logo"
+                    app:layout_constraintRight_toLeftOf="@+id/status"
+                    app:layout_constraintTop_toTopOf="@+id/logo"
+                    tools:text="没加fasdfdsfdsfdsfdsfdsfdsfdsfdsffdssfdkfjksd" />
+
+
+                <TextView
+                    android:id="@+id/status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/base_margin"
+                    android:layout_marginRight="@dimen/base_margin"
+                    android:textColor="@color/text_content_text"
+                    android:textSize="@dimen/text_size_subhead"
+                    app:layout_constraintBottom_toBottomOf="@+id/logo"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/logo"
+                    tools:text="没加" />
+
+                <ImageView
+                    android:id="@+id/logo_divider"
+                    style="@style/DividerHorizontalStyle"
+                    android:layout_marginTop="@dimen/base_size2"
+                    app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+                <TableLayout
+                    android:id="@+id/table_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/base_margin"
+                    android:layout_marginLeft="@dimen/base_margin"
+                    android:layout_marginRight="@dimen/base_margin"
+                    android:layout_marginStart="@dimen/base_margin"
+                    android:paddingTop="@dimen/base_size2"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/logo_divider">
+
+                </TableLayout>
+
+                <ImageView
+                    android:id="@+id/table_divider"
+                    style="@style/DividerHorizontalStyle"
+                    app:layout_constraintTop_toBottomOf="@+id/table_layout" />
+
+                <TableLayout
+                    android:id="@+id/discount_table"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/base_margin"
+                    android:layout_marginLeft="@dimen/base_margin"
+                    android:layout_marginRight="@dimen/base_margin"
+                    android:layout_marginStart="@dimen/base_margin"
+                    android:paddingTop="@dimen/base_size2"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/table_divider" />
+
+                <ImageView
+                    android:id="@+id/discount_divider"
+                    style="@style/DividerHorizontalStyle"
+                    app:layout_constraintTop_toBottomOf="@+id/discount_table" />
+
+                <TableLayout
+                    android:id="@+id/table_layout2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/base_margin"
+                    android:layout_marginLeft="@dimen/base_margin"
+                    android:layout_marginRight="@dimen/base_margin"
+                    android:layout_marginStart="@dimen/base_margin"
+                    android:paddingTop="@dimen/base_size2"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/discount_divider">
+
+                </TableLayout>
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/base_margin"
+                android:layout_marginRight="@dimen/base_margin"
+                android:layout_marginTop="@dimen/base_size2"
+                android:background="@drawable/bg_card"
+                android:paddingBottom="@dimen/base_size2">
+
+                <TextView
+                    android:id="@+id/sub_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/base_margin"
+                    android:text="预约信息"
+                    android:textColor="@color/text_content_title"
+                    android:textSize="@dimen/text_size_subhead"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/sub_divider"
+                    style="@style/DividerHorizontalStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="@dimen/base_margin"
+                    android:layout_marginStart="@dimen/base_margin"
+                    android:layout_marginTop="@dimen/base_size3"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/sub_title" />
+
+                <TableLayout
+                    android:id="@+id/sub_table"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/base_margin"
+                    android:layout_marginLeft="@dimen/base_margin"
+                    android:layout_marginRight="@dimen/base_margin"
+                    android:layout_marginStart="@dimen/base_margin"
+                    android:paddingTop="@dimen/base_size2"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/sub_divider" />
+            </android.support.constraint.ConstraintLayout>
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

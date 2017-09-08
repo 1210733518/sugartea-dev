@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.dianjiake.android">
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.LOCATION_HARDWARE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS"/>
+    <uses-permission android:name="android.permission.INSTALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:name=".base.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/TranslateStatusBarTheme">
+        <activity
+            android:name=".ui.splash.SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.main.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.searchlocation.SearchLocationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".ui.shopdetail.ShopDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.shopweb.ShopWebActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.subscribe.SubscribeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.subscribe.ServiceStaffListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.subscribe.ChooseTimeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.login.LoginChooseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.login.LoginPhoneActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.login.CompleteInfoActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.nocomment.NoCommentOrderActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.evaluate.EvaluateActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+
+        <activity
+            android:name=".ui.orderdetail.OrderDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.setting.SettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.login.EditNameActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.dialog.ShareDialog"
+            android:screenOrientation="portrait"
+            android:theme="@style/DialogActivity"></activity>
+
+        <activity
+            android:name=".ui.vip.VipActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.colloction.CollectionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.coupon.CouponActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.servicetype.ServiceTypeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.dialog.GetCouponSuccessDialog"
+            android:screenOrientation="portrait"
+            android:theme="@style/DialogActivity" />
+        <activity
+            android:name=".view.dialog.GetCouponFailDialog"
+            android:screenOrientation="portrait"
+            android:theme="@style/DialogActivity" />
+        <activity
+            android:name=".ui.simpleactivity.SimpleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.msg.MsgActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.open.OpenActivity"
+            android:screenOrientation="portrait" />
+        <!--微信-->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <activity
+            android:name="com.umeng.qq.tencent.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent100424468" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.umeng.qq.tencent.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="48359150ad4b29e5b514a626e12433c2"></meta-data>
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="596df666b27b0a5f3f0005c7"></meta-data>
+
+        <!--个推-->
+        <service
+            android:name=".service.InitPushService"
+            android:exported="true"
+            android:label="PushService"
+            android:process=":pushservice"></service>
+        <service android:name=".service.ReceivePushService" />
+        <activity android:name=".ui.searchshop.SearchShopActivity"></activity>
+    </application>
+
+</manifest>

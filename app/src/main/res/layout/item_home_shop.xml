@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/click_white"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/base_margin">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/logo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="@dimen/base_margin"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0"
+            app:placeholderImage="@color/divider"
+            app:roundBottomLeft="true"
+            app:roundBottomRight="true"
+            app:roundTopLeft="true"
+            app:roundTopRight="true"
+            app:roundedCornerRadius="@dimen/base_size1" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/base_margin"
+            android:layout_marginRight="@dimen/base_margin"
+            android:layout_marginTop="@dimen/base_margin"
+            android:orientation="vertical"
+            app:layout_constraintLeft_toRightOf="@+id/logo"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textColor="@color/text_content_title"
+                    android:textSize="@dimen/text_size_subhead"
+                    tools:text="神经病fsfsdfsfdfsdfsdfsdfsdfsdfdf" />
+
+                <TextView
+                    android:id="@+id/distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/base_size2"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textColor="@color/text_content_hint"
+                    android:textSize="@dimen/text_size_caption"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/name"
+                    app:layout_constraintHorizontal_bias="1"
+                    app:layout_constraintLeft_toRightOf="@+id/name"
+                    app:layout_constraintRight_toRightOf="parent"
+                    tools:text="1.32km" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/base_size2"
+                android:ellipsize="end"
+                android:lineSpacingExtra="@dimen/base_size1"
+                android:maxLines="2"
+                android:textColor="@color/text_content_secondary"
+                android:textSize="@dimen/text_size_body"
+                tools:text="30年老店，要啥啥没有，坑你没商量.30年老店，要啥啥没有，坑你没商量.30年老30年老店，要啥啥没有，坑你没商量" />
+
+            <com.dianjiake.android.view.widget.StarView
+                android:id="@+id/star"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/base_size2" />
+
+            <!--促销-->
+            <LinearLayout
+                android:id="@+id/promotion_holder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/base_size2"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/text_size_body"
+                    android:layout_height="@dimen/text_size_body"
+                    android:background="@drawable/bg_text_promotion"
+                    android:gravity="center"
+                    android:src="@drawable/ic_shop_promotion"
+                    android:textColor="@color/text_white"
+                    android:textSize="@dimen/text_size_caption" />
+
+                <TextView
+                    android:id="@+id/promotion_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/base_size2"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textColor="@color/text_content_text"
+                    android:textSize="@dimen/text_size_body"
+                    tools:text="lkdfsadfjfklsfsfksfkjksjdfkjksdkfksdjfkjffjkkkkkk" />
+            </LinearLayout>
+
+            <!--促销-->
+            <LinearLayout
+                android:id="@+id/card_holder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/base_size2"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/text_size_body"
+                    android:layout_height="@dimen/text_size_body"
+                    android:background="@drawable/bg_text_promotion"
+                    android:gravity="center"
+                    android:src="@drawable/ic_shop_coupon"
+                    android:textColor="@color/text_white"
+                    android:textSize="@dimen/text_size_caption" />
+
+                <TextView
+                    android:id="@+id/card_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/base_size2"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textColor="@color/text_content_text"
+                    android:textSize="@dimen/text_size_body"
+                    tools:text="lkdfsadfjfklsfsfksfkjksjdfkjksdkfksdjfkjffjkkkkkk" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="@dimen/divider_size"
+        android:src="@color/divider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+</LinearLayout>

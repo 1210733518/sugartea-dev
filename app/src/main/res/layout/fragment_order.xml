@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_order" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.dianjiake.android.view.widget.PtrListLayout
+            android:id="@id/ptr_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:id="@+id/no_comment_holder"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="40dp"
+            android:layout_marginLeft="@dimen/base_margin"
+            android:layout_marginRight="@dimen/base_margin"
+            android:layout_marginTop="@dimen/base_size2"
+            android:background="@drawable/bg_order_no_comment"
+            android:gravity="center_vertical">
+
+            <Space
+                android:layout_width="@dimen/button_size_mini"
+                android:layout_height="@dimen/button_size_mini"
+                android:layout_marginLeft="@dimen/base_size2" />
+
+            <TextView
+                android:id="@+id/no_comment_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/base_size2"
+                android:layout_marginRight="@dimen/base_size2"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textColor="@color/main"
+                android:textSize="@dimen/text_size_subhead"
+                tools:text="还有5提案" />
+
+            <ImageView
+                android:id="@+id/no_comment_close"
+                android:layout_width="@dimen/button_size_mini"
+                android:layout_height="@dimen/button_size_mini"
+                android:layout_marginRight="@dimen/base_size2"
+                android:padding="11dp"
+                android:src="@drawable/ic_toolbar_close" />
+
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

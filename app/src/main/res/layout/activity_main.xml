@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.dianjiake.android.ui.main.MainActivity">
+
+
+    <FrameLayout
+        android:id="@id/fragment_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"></FrameLayout>
+
+    <include layout="@layout/divider_horizontal" />
+
+    <RadioGroup
+        android:id="@+id/main_radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/text_white"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatRadioButton
+            android:id="@+id/main_radio_home"
+            style="@style/MainTabStyle"
+            android:checked="true"
+            android:drawableTop="@drawable/radio_home"
+            android:text="首页" />
+
+        <android.support.v7.widget.AppCompatRadioButton
+            android:id="@+id/main_radio_service"
+            style="@style/MainTabStyle"
+            android:drawableTop="@drawable/radio_service"
+
+            android:text="服务" />
+
+
+        <android.support.v7.widget.AppCompatRadioButton
+            android:id="@+id/main_radio_orders"
+            style="@style/MainTabStyle"
+            android:drawableTop="@drawable/radio_order"
+            android:text="订单" />
+
+        <android.support.v7.widget.AppCompatRadioButton
+            android:id="@+id/main_radio_mine"
+            style="@style/MainTabStyle"
+            android:drawableTop="@drawable/radio_mine"
+            android:text="我的" />
+
+    </RadioGroup>
+</LinearLayout>

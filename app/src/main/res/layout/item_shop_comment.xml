@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/click_white"
+    android:orientation="vertical">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/avatar"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="@dimen/base_margin"
+            android:layout_marginTop="@dimen/base_margin"
+            app:layout_constraintBottom_toTopOf="@+id/comment"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0"
+            app:layout_goneMarginBottom="@dimen/base_margin"
+            app:placeholderImage="@drawable/ic_defaul_avatar"
+            app:roundAsCircle="true" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/base_margin"
+            android:layout_marginRight="@dimen/base_size2"
+            android:layout_marginTop="@dimen/base_size1"
+            android:lineSpacingExtra="@dimen/base_size1"
+            android:singleLine="true"
+            android:textColor="@color/text_content_title"
+            android:textSize="@dimen/text_size_subhead"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintLeft_toRightOf="@+id/avatar"
+            app:layout_constraintRight_toLeftOf="@+id/time"
+            app:layout_constraintTop_toTopOf="@+id/avatar"
+            tools:text="姓名" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/base_margin"
+            android:textColor="@color/text_content_secondary"
+            android:textSize="@dimen/text_size_body"
+            app:layout_constraintBaseline_toBaselineOf="@+id/name"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:text="03-23" />
+
+        <com.dianjiake.android.view.widget.StarView
+            android:id="@+id/star_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/base_size1"
+            app:layout_constraintBottom_toBottomOf="@+id/avatar"
+            app:layout_constraintLeft_toLeftOf="@id/name" />
+
+        <TextView
+            android:id="@+id/comment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/base_margin"
+            android:layout_marginLeft="@dimen/base_margin"
+            android:layout_marginRight="@dimen/base_margin"
+            android:lineSpacingExtra="@dimen/base_size1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/avatar"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/avatar"
+            tools:text="fsfsafsdfsdfsdfdsffsdfsdfsd冯撒地方水电费发水电费就开始四度空间发萨福克啊阿斯达克减肥 发可视对讲付款阿斯达克减肥收款方dddddddddddddddddddddfssdfsdfd" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/divider_size"
+            android:src="@color/divider"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+
+</LinearLayout>

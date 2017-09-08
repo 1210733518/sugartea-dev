@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/text_white"
+    android:orientation="vertical">
+
+    <com.dianjiake.android.view.widget.ToolbarSpaceView
+        android:id="@+id/toolbar_space"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"></com.dianjiake.android.view.widget.ToolbarSpaceView>
+
+
+    <EditText
+        android:id="@+id/toolbar_input"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="@dimen/base_margin"
+        android:layout_marginRight="@dimen/base_margin"
+        android:background="@drawable/bg_home_search"
+        android:hint="搜索你所在的小区"
+        android:imeOptions="actionSearch"
+        android:paddingLeft="@dimen/base_size7"
+        android:paddingRight="@dimen/base_margin"
+        android:singleLine="true"
+        android:textColor="@color/text_content_text"
+        android:textColorHint="@color/text_content_secondary"
+        android:textSize="@dimen/text_size_body"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/toolbar_right"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_space" />
+
+    <TextView
+        android:id="@+id/toolbar_title"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="@dimen/base_margin"
+        android:layout_marginRight="@dimen/base_margin"
+        android:background="@drawable/bg_home_search"
+        android:gravity="center_vertical"
+        android:hint="搜索你所在的小区"
+        android:paddingLeft="@dimen/base_size7"
+        android:paddingRight="@dimen/base_margin"
+        android:singleLine="true"
+        android:textColor="@color/text_content_text"
+        android:textColorHint="@color/text_content_secondary"
+        android:textSize="@dimen/text_size_body"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/toolbar_right"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_space" />
+
+    <ImageView
+        android:layout_width="@dimen/base_size3"
+        android:layout_height="@dimen/base_size3"
+        android:layout_marginLeft="@dimen/base_size5"
+        android:src="@drawable/ic_toolbar_search_grey"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_space" />
+
+    <TextView
+        android:id="@+id/toolbar_right"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/toolbar_size"
+        android:layout_marginRight="@dimen/base_margin"
+        android:gravity="center_vertical"
+        android:text="取消"
+        android:textColor="@color/main"
+        android:textSize="@dimen/text_size_subhead"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_space" />
+
+    <ImageView
+        android:id="@+id/toolbar_divider"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/divider_size"
+        android:src="@color/divider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.dianjiake.android.view.widget.ADView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/timeline_ad_view"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:height_pro="1.0"
+    app:width_pro="2.0"></com.dianjiake.android.view.widget.ADView>
